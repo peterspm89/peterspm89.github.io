@@ -91,7 +91,11 @@ public class WordSearch {
 
     /// Returns true if one of the words is found by search the grid's
     // rows by searching horizontally forward.
-    public boolean containsWordHorizontallyForward() {
+    public ArrayList<String> containsWordHorizontallyForward() {
+
+        /// Not sure how many words I will find, so I am using a container
+        /// that dynamically grows.
+        ArrayList<String> wordsFound = new ArrayList();
 
         String line;
         for (int i = 0; i < this.getHeight(); i++) {
@@ -100,11 +104,11 @@ public class WordSearch {
             for (String word : words) {
 
                 if (line.contains(word)) {
-                    return true;
+                    wordsFound.add(word);
                 }
             }
         }
 
-        return false;
+        return wordsFound;
     }
 }

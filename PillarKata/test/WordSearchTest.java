@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class WordSearchTest {
@@ -77,7 +79,8 @@ class WordSearchTest {
         // containing the names found.
 
         /// Create the expected result.
-        final String[] expectedWords = {"Scotty"};
+        final ArrayList<String> expectedWords = new ArrayList<>();
+        expectedWords.add("SCOTTY");
 
         assertEquals(expectedWords, wordSearch.containsWordHorizontallyForward());
     }
