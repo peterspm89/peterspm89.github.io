@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecf57921-c8c4-4f5f-841f-ca02b1fed9ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/sample_input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample_input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/WordSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/WordSearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordSearch.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +22,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/WordSearch.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="117" column="95" selection-start-line="117" selection-start-column="95" selection-end-line="117" selection-end-column="95" />
+                <state relative-caret-position="288">
+                  <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#2075#2076#0" expanded="true" />
@@ -43,8 +42,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="295">
-                  <caret line="83" column="66" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
+                <state relative-caret-position="372">
+                  <caret line="103" column="66" selection-start-line="103" selection-start-column="66" selection-end-line="103" selection-end-column="66" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#setUp#0;class#WordSearchTest#0" />
@@ -76,8 +75,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/WordSearch.java" />
         <option value="$PROJECT_DIR$/test/WordSearchTest.java" />
+        <option value="$PROJECT_DIR$/src/WordSearch.java" />
       </list>
     </option>
   </component>
@@ -179,15 +178,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WordSearchTest - 2019.04.20 at 15h 16m 30s.xml">
-      <configuration name="WordSearchTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.20 at 15h 17m 00s.xml">
-      <configuration name="WordSearchTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.20 at 15h 35m 52s.xml">
-      <configuration name="WordSearchTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="WordSearchTest - 2019.04.20 at 16h 15m 51s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
@@ -209,6 +199,15 @@
     <history-entry file="WordSearchTest - 2019.04.20 at 16h 24m 41s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="WordSearchTest - 2019.04.20 at 16h 27m 20s.xml">
+      <configuration name="WordSearchTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WordSearchTest - 2019.04.20 at 16h 27m 49s.xml">
+      <configuration name="WordSearchTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WordSearchTest - 2019.04.20 at 16h 28m 50s.xml">
+      <configuration name="WordSearchTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="825" extended-state="6" />
@@ -222,13 +221,13 @@
       <window_info content_ui="combo" id="Project" order="0" weight="0.24340177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.22510232" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.22510232" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
       <window_info anchor="bottom" id="Messages" weight="0.3287858" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3287858" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3287858" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -246,24 +245,10 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/WordSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="117" column="95" selection-start-line="117" selection-start-column="95" selection-end-line="117" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2075#2076#0" expanded="true" />
-            <element signature="e#2161#2162#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2335#2336#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="83" column="66" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
+        <state relative-caret-position="372">
+          <caret line="103" column="66" selection-start-line="103" selection-start-column="66" selection-end-line="103" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setUp#0;class#WordSearchTest#0" />
@@ -272,6 +257,27 @@
             <element signature="method#whenWordSearchIsCreatedVerifyTheWordsToFindAreIdentified#0;class#WordSearchTest#0" />
             <element signature="method#whenWordSearchIsCreatedVerifyTheWordsToFindAreIdentified#1;class#WordSearchTest#0" />
             <element signature="method#whenWordSearchIsCreatedTheInitialOutputIsEmpty#1;class#WordSearchTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WordSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2075#2076#0" expanded="true" />
+            <element signature="e#2161#2162#0" expanded="true" />
+            <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2335#2336#0" expanded="true" />
           </folding>
         </state>
       </provider>

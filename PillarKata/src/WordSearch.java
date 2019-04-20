@@ -122,4 +122,33 @@ public class WordSearch {
 
         return wordsFound;
     }
+
+    /// Returns the words found and their coordinates searching horizontally forward.
+    public boolean containsWordVerticallyForward() {
+
+        String column;
+        for (int x = 0; x < this.getHeight(); x++) {
+
+            column = getColumnAtIndex(x);
+            for (String word : words) {
+                if (column.contains(word)) {
+
+                    return true;
+                }
+            }
+
+        }
+
+        return false;
+    }
+
+    /// Auxiliary method supporting containsWordVerticallyForward
+    private String getColumnAtIndex(Integer column) {
+        String temp = new String();
+        for (int i = 0; i < this.getWidth(); i++) {
+            temp += grid[i][column];
+        }
+
+        return temp;
+    }
 }
