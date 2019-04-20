@@ -36,29 +36,29 @@ class WordSearchTest {
     }
 
     @Test
-    public void whenWordSearchIsCreatedVerifyTheWordsToFindAreIdentified() {
+    public void whenWordSearchIsCreated_VerifyTheWordsToFindAreIdentified() {
         /// My first test will simply instantiate an instance of WordSearch and
         // make sure it returns the expected list of words to find.
 
         /// Create the expected result.
-        String[] expectedWords = ("BONES,KHAN,KIRK,SCOTTY,SPOCK,SULU,UHURA").split(",");
+        final String[] expectedWords = ("BONES,KHAN,KIRK,SCOTTY,SPOCK,SULU,UHURA").split(",");
 
         assertArrayEquals(expectedWords, wordSearch.getWords());
     }
 
     @Test
-    public void whenWordSearchIsCreatedTheInitialOutputIsEmpty() {
+    public void whenWordSearchIsCreated_VerifyTheInitialOutputIsEmpty() {
         /// This second test makes sure that after the WordSearch is created the output is
         // set to an empty string array.
 
         /// Create the expected result.
-        String[] expectedOutput = new String[0];
+        final String[] expectedOutput = new String[0];
 
         assertArrayEquals(expectedOutput, wordSearch.getOutput());
     }
 
     @Test
-    public void whenWordSearchIsCreatedTheDimensionsOfGridAreVerified() {
+    public void whenWordSearchIsCreated_VerifyTheDimensionsOfGridAreIdentified() {
         /// This third test validates the dimensions of the grid from the input file.
         /// Per the kata spec, the input files will be a square, so no validation is needed.
         /// This test assures that I am reading and initializing my grid correctly.
@@ -68,6 +68,18 @@ class WordSearchTest {
 
         assertEquals(expectedDimensions, wordSearch.getHeight());
         assertEquals(expectedDimensions, wordSearch.getWidth());
+    }
+
+    @Test
+    public void whenSearchingEachRowHorizontalForward_AreAnyWordsPresent() {
+        /// Test if any of the rows contains one of the words we want to find.
+        /// containsWordHorizontallyForward will return true if one of the words
+        // is present in one of the rows.
+
+        /// Create the expected result.
+        final boolean expectedResult = true;
+
+        assertEquals(expectedResult, wordSearch.containsWordHorizontallyForward());
     }
 
 }
