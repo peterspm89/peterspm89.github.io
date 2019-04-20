@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecf57921-c8c4-4f5f-841f-ca02b1fed9ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/WordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/WordSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/WordSearchTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,14 +22,14 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/WordSearch.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="394">
-                  <caret line="67" column="60" lean-forward="true" selection-start-line="66" selection-start-column="55" selection-end-line="67" selection-end-column="60" />
+                <state relative-caret-position="894">
+                  <caret line="64" selection-start-line="64" selection-end-line="64" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#2315#2316#0" expanded="true" />
-                    <element signature="e#2401#2402#0" expanded="true" />
-                    <element signature="e#2490#2491#0" expanded="true" />
-                    <element signature="e#2575#2576#0" expanded="true" />
+                    <element signature="e#2075#2076#0" expanded="true" />
+                    <element signature="e#2161#2162#0" expanded="true" />
+                    <element signature="e#2250#2251#0" expanded="true" />
+                    <element signature="e#2335#2336#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -40,7 +39,7 @@
             <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="285">
-                  <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+                  <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#397#423#0" />
@@ -57,10 +56,12 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="107" column="61" selection-start-line="107" selection-start-column="61" selection-end-line="107" selection-end-column="61" />
+                <state relative-caret-position="128">
+                  <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#399#425#0" />
+                    <element signature="e#434#1065#0" />
                     <element signature="e#547#573#0" />
                     <element signature="e#582#1213#0" />
                     <element signature="e#1880#1906#0" />
@@ -90,8 +91,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/WordSearchTest.java" />
         <option value="$PROJECT_DIR$/src/WordSearch.java" />
+        <option value="$PROJECT_DIR$/test/WordSearchTest.java" />
       </list>
     </option>
   </component>
@@ -208,6 +209,15 @@
     <history-entry file="WordSearchTest - 2019.04.20 at 14h 19m 42s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="WordSearchTest - 2019.04.20 at 14h 36m 49s.xml">
+      <configuration name="WordSearchTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WordSearchTest - 2019.04.20 at 14h 37m 48s.xml">
+      <configuration name="WordSearchTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WordSearchTest - 2019.04.20 at 14h 38m 26s.xml">
+      <configuration name="WordSearchTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="825" extended-state="6" />
@@ -245,28 +255,34 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
+    <entry file="file://$PROJECT_DIR$/src/WordSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state relative-caret-position="894">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#397#423#0" />
-            <element signature="e#432#1063#0" />
+            <element signature="e#2075#2076#0" expanded="true" />
+            <element signature="e#2161#2162#0" expanded="true" />
+            <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2335#2336#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WordSearch.java">
+    <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="67" column="60" lean-forward="true" selection-start-line="66" selection-start-column="55" selection-end-line="67" selection-end-column="60" />
+        <state relative-caret-position="128">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2315#2316#0" expanded="true" />
-            <element signature="e#2401#2402#0" expanded="true" />
-            <element signature="e#2490#2491#0" expanded="true" />
-            <element signature="e#2575#2576#0" expanded="true" />
+            <element signature="e#399#425#0" />
+            <element signature="e#434#1065#0" />
+            <element signature="e#547#573#0" />
+            <element signature="e#582#1213#0" />
+            <element signature="e#1880#1906#0" />
+            <element signature="e#1915#2546#0" />
+            <element signature="e#3137#3163#0" />
+            <element signature="e#3172#3803#0" />
           </folding>
         </state>
       </provider>
