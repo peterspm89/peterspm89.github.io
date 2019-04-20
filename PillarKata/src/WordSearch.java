@@ -13,6 +13,9 @@ public class WordSearch {
     /// The output that will consist of the coordinates of each letter found.
     private String[] output;
 
+    /// The grid of single character values.
+    private char[][] grid;
+
     public WordSearch() {
 
         /// Create a temporary List of Strings that will hold the contents of the input
@@ -48,6 +51,18 @@ public class WordSearch {
             words = lines.get(0).split(",");
             output = new String[0];
 
+            grid = new char[lines.size()-1][lines.size()-1];
+
+            String line;
+            for (int i = 1; i < lines.size(); i++) {
+
+                /// Remove commas.
+                line = lines.get(i).replaceAll(",","");
+
+                /// Convert String to character array.
+                grid[i-1] = line.toCharArray();
+            }
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -62,5 +77,15 @@ public class WordSearch {
     /// Public getter
     public String[] getOutput() {
         return output;
+    }
+
+    /// Public getter
+    public int getHeight() {
+        return grid[0].length;
+    }
+
+    /// Public getter
+    public int getWidth() {
+        return grid.length;
     }
 }

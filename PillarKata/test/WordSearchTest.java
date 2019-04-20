@@ -105,7 +105,7 @@ class WordSearchTest {
         final int expectedDimensions = 15;
 
         WordSearch wordSearch = new WordSearch();
-        assertEquals(expectedDimensions, wordSearch.getLength());
+        assertEquals(expectedDimensions, wordSearch.getHeight());
         assertEquals(expectedDimensions, wordSearch.getWidth());
     }
 
