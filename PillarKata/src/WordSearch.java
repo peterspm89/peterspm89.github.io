@@ -166,4 +166,43 @@ public class WordSearch {
 
         return temp;
     }
+
+    /// Returns the words found and their coordinates searching horizontally forward.
+    public ArrayList<String> containsWordHorizontallyBackward() {
+
+        /// Not sure how many words I will find, so I am using a container
+        /// that dynamically grows.
+        ArrayList<String> wordsFound = new ArrayList();
+
+        String line;
+        int index;
+        String formattedOutput;
+        for (int x = 0; x < this.getHeight(); x++) {
+
+            line = new String(grid[x]);
+            java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
+            _reverse.append(line);
+            _reverse = _reverse.reverse();
+            line = _reverse.toString();
+
+            for (String word : words) {
+
+                if (line.contains(word)) {
+
+                    formattedOutput = String.format("%s: ", word);
+                    index = line.indexOf(word);
+                    for (int y = 0; y < word.length(); y++) {
+
+                        formattedOutput += String.format("(%d,%d),", (this.getWidth()-index-y-1), x);
+                    }
+
+                    /// Remove the last character in string, which is an extra comma.
+                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                    wordsFound.add(formattedOutput);
+                }
+            }
+        }
+
+        return wordsFound;
+    }
 }
