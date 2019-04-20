@@ -12,8 +12,8 @@ public class WordSearch {
 
     public WordSearch() {
 
-        /// Create a temporary List of Strings that will hold the contents of the input file until we
-        // are ready to set our member properties.
+        /// Create a temporary List of Strings that will hold the contents of the input
+        // file until we are ready to set our member properties.
         /// Not sure what the dimensions are for the grid, so I am using a container
         /// that dynamically grows.
         List<String> lines = new ArrayList();
