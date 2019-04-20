@@ -89,8 +89,7 @@ public class WordSearch {
         return grid.length;
     }
 
-    /// Returns true if one of the words is found by search the grid's
-    // rows by searching horizontally forward.
+    /// Returns the words found and their coordinates searching horizontally forward.
     public ArrayList<String> containsWordHorizontallyForward() {
 
         /// Not sure how many words I will find, so I am using a container

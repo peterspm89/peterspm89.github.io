@@ -75,14 +75,33 @@ class WordSearchTest {
     @Test
     public void whenSearchingEachRowHorizontalForward_AreAnyWordsPresent() {
         /// Test if any of the rows contains one of the words we want to find.
-        /// containsWordHorizontallyForward will be refactored to return a list of strings
-        // containing the names found.
+        /// containsWordHorizontallyForward has been refactored to return a list of strings
+        // containing the names found with their coordinates.
+        /*
+        As the Puzzle Solver, I want to search horizontally so that I can find words on the
+        x-axis.
+         */
 
         /// Create the expected result.
         final ArrayList<String> expectedWords = new ArrayList<>();
         expectedWords.add("SCOTTY: (0,5),(1,5),(2,5),(3,5),(4,5),(5,5)");
 
         assertEquals(expectedWords, wordSearch.containsWordHorizontallyForward());
+    }
+
+    @Test
+    public void whenSearchingEachRowVerticalForward_AreAnyWordsPresent() {
+        /// Test if any of the rows contains one of the words we want to find.
+        /// containsWordVerticallyForward returns true if a word is found.
+        /*
+        As the Puzzle Solver, I want to search vertically so that I can find words on the
+        y-axis.
+         */
+
+        /// Create the expected result.
+        final boolean expectedResult = true;
+
+        assertEquals(expectedResult, wordSearch.containsWordVerticallyForward());
     }
 
 }
