@@ -107,7 +107,7 @@ public class WordSearch {
                 if (line.contains(word)) {
 
                     formattedOutput = String.format("%s: ", word);
-                    index = line.indexOf(word.charAt(0));
+                    index = line.indexOf(word);
                     for (int y = 0; y < word.length(); y++) {
 
                         formattedOutput += String.format("(%d,%d),", (index+y), x);
@@ -124,8 +124,14 @@ public class WordSearch {
     }
 
     /// Returns the words found and their coordinates searching horizontally forward.
-    public boolean containsWordVerticallyForward() {
+    public ArrayList<String> containsWordVerticallyForward() {
 
+        /// Not sure how many words I will find, so I am using a container
+        /// that dynamically grows.
+        ArrayList<String> wordsFound = new ArrayList();
+
+        int index;
+        String formattedOutput;
         String column;
         for (int x = 0; x < this.getHeight(); x++) {
 
@@ -133,13 +139,22 @@ public class WordSearch {
             for (String word : words) {
                 if (column.contains(word)) {
 
-                    return true;
+                    formattedOutput = String.format("%s: ", word);
+                    index = column.indexOf(word);
+                    for (int y = 0; y < word.length(); y++) {
+
+                        formattedOutput += String.format("(%d,%d),", x, (index+y));
+                    }
+
+                    /// Remove the last character in string, which is an extra comma.
+                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                    wordsFound.add(formattedOutput);
                 }
             }
 
         }
 
-        return false;
+        return wordsFound;
     }
 
     /// Auxiliary method supporting containsWordVerticallyForward

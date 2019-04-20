@@ -92,16 +92,17 @@ class WordSearchTest {
     @Test
     public void whenSearchingEachRowVerticalForward_AreAnyWordsPresent() {
         /// Test if any of the rows contains one of the words we want to find.
-        /// containsWordVerticallyForward returns true if a word is found.
+        /// containsWordVerticallyForward returns the words found and their coordinates.
         /*
         As the Puzzle Solver, I want to search vertically so that I can find words on the
         y-axis.
          */
 
         /// Create the expected result.
-        final boolean expectedResult = true;
+        final ArrayList<String> expectedWords = new ArrayList<>();
+        expectedWords.add("BONES: (0,6),(0,7),(0,8),(0,9),(0,10)");
 
-        assertEquals(expectedResult, wordSearch.containsWordVerticallyForward());
+        assertEquals(expectedWords, wordSearch.containsWordVerticallyForward());
     }
 
 }
