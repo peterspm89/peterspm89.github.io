@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecf57921-c8c4-4f5f-841f-ca02b1fed9ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ecf57921-c8c4-4f5f-841f-ca02b1fed9ac" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,36 +14,60 @@
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WordSearch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1477#1478#0" expanded="true" />
-                <element signature="e#1505#1506#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#397#423#0" />
-                <element signature="e#432#1063#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.47281832">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/WordSearch.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-11">
+                  <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1477#1478#0" expanded="true" />
+                    <element signature="e#1505#1506#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#397#423#0" />
+                    <element signature="e#432#1063#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="252">
+                  <caret line="45" column="93" selection-start-line="45" selection-start-column="93" selection-end-line="45" selection-end-column="93" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#547#573#0" />
+                    <element signature="e#582#1213#0" />
+                    <element signature="e#1880#1906#0" />
+                    <element signature="e#1915#2546#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,11 +88,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="13" />
-    <option name="y" value="27" />
-    <option name="width" value="1406" />
-    <option name="height" value="804" />
+    <option name="y" value="29" />
+    <option name="width" value="1373" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -178,17 +200,18 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="13" y="27" width="1406" height="804" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="826" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24340177" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24340177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.31601125" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.22615804" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
       <window_info anchor="bottom" id="Messages" />
@@ -214,8 +237,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/WordSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        <state relative-caret-position="-11">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1477#1478#0" expanded="true" />
@@ -226,12 +249,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state relative-caret-position="252">
+          <caret line="45" column="93" selection-start-line="45" selection-start-column="93" selection-end-line="45" selection-end-column="93" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#397#423#0" />
-            <element signature="e#432#1063#0" />
+            <element signature="e#547#573#0" />
+            <element signature="e#582#1213#0" />
+            <element signature="e#1880#1906#0" />
+            <element signature="e#1915#2546#0" />
           </folding>
         </state>
       </provider>

@@ -10,6 +10,9 @@ public class WordSearch {
     /// what we have to find.
     private String[] words;
 
+    /// The output that will consist of the coordinates of each letter found.
+    private String[] output;
+
     public WordSearch() {
 
         /// Create a temporary List of Strings that will hold the contents of the input
@@ -43,6 +46,7 @@ public class WordSearch {
         try {
 
             words = lines.get(0).split(",");
+            output = new String[0];
 
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -53,5 +57,10 @@ public class WordSearch {
     /// Public getter
     public String[] getWords() {
         return words;
+    }
+
+    /// Public getter
+    public String[] getOutput() {
+        return output;
     }
 }
