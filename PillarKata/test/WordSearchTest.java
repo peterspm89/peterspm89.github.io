@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Test;
+import sun.jvm.hotspot.utilities.Assert;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -30,10 +31,12 @@ class WordSearchTest {
         K,Y,L,B,Q,Q,P,M,D,F,C,K,E,A,B
         */
         //endregion
+
         /// Create the expected result.
         String[] expectedWords = ("BONES,KHAN,KIRK,SCOTTY,SPOCK,SULU,UHURA").split(",");
+
         WordSearch wordSearch = new WordSearch();
-        assertEquals(expectedWords, wordSearch.getWords());
+        assertArrayEquals(expectedWords, wordSearch.getWords());
     }
 
 }
