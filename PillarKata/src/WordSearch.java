@@ -98,13 +98,25 @@ public class WordSearch {
         ArrayList<String> wordsFound = new ArrayList();
 
         String line;
-        for (int i = 0; i < this.getHeight(); i++) {
+        int index;
+        String formattedOutput;
+        for (int x = 0; x < this.getHeight(); x++) {
 
-            line = new String(grid[i]);
+            line = new String(grid[x]);
             for (String word : words) {
 
                 if (line.contains(word)) {
-                    wordsFound.add(word);
+
+                    formattedOutput = String.format("%s: ", word);
+                    index = line.indexOf(word.charAt(0));
+                    for (int y = 0; y < word.length(); y++) {
+
+                        formattedOutput += String.format("(%d,%d),", (index+y), x);
+                    }
+
+                    /// Remove the last character in string, which is an extra comma.
+                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                    wordsFound.add(formattedOutput);
                 }
             }
         }
