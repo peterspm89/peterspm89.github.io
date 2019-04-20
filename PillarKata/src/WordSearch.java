@@ -88,4 +88,23 @@ public class WordSearch {
     public int getWidth() {
         return grid.length;
     }
+
+    /// Returns true if one of the words is found by search the grid's
+    // rows by searching horizontally forward.
+    public boolean containsWordHorizontallyForward() {
+
+        String line;
+        for (int i = 0; i < this.getHeight(); i++) {
+
+            line = new String(grid[i]);
+            for (String word : words) {
+
+                if (line.contains(word)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
 }
