@@ -73,13 +73,13 @@ class WordSearchTest {
     @Test
     public void whenSearchingEachRowHorizontalForward_AreAnyWordsPresent() {
         /// Test if any of the rows contains one of the words we want to find.
-        /// containsWordHorizontallyForward will return true if one of the words
-        // is present in one of the rows.
+        /// containsWordHorizontallyForward will be refactored to return a list of strings
+        // containing the names found.
 
         /// Create the expected result.
-        final boolean expectedResult = true;
+        final String[] expectedWords = {"Scotty"};
 
-        assertEquals(expectedResult, wordSearch.containsWordHorizontallyForward());
+        assertEquals(expectedWords, wordSearch.containsWordHorizontallyForward());
     }
 
 }
