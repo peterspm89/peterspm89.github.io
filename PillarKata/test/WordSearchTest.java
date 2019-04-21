@@ -90,7 +90,7 @@ class WordSearchTest {
     }
 
     @Test
-    public void whenSearchingEachRowVerticalForward_AreAnyWordsPresent() {
+    public void whenSearchingEachColumnVerticalForward_AreAnyWordsPresent() {
         /// Test if any of the columns contains one of the words we want to find.
         /// containsWordVerticallyForward returns the words found and their coordinates.
         /*
@@ -123,7 +123,7 @@ class WordSearchTest {
     }
 
     @Test
-    public void whenSearchingEachRowVerticallyBackward_AreAnyWordsPresent() {
+    public void whenSearchingEachColumnVerticallyBackward_AreAnyWordsPresent() {
         /// Test if any of the columns contains one of the words we want to find.
         /// containsWordHVerticallyBackward returns a list of strings
         // containing the names found with their coordinates.
@@ -139,6 +139,24 @@ class WordSearchTest {
         assertEquals(expectedWords, wordSearch.containsWordVerticallyBackward());
     }
 
+
+
     /// TODO: Refactor horizontal and vertical searches to remove duplicate code.
+
+
+
+    @Test
+    public void whenSearchingEachDiagonalRowForward_AreAnyWordsPresent() {
+        /// Test if any of the diagonal rows contains one of the words we want to find.
+        /// containsWordDiagonallyForward returns true if one of the words is found.
+        /*
+        As the Puzzle Solver, I want to search diagonally descending so that I can find words that
+        descend along the x-axis.
+         */
+
+       final boolean expectedResult = true;
+
+        assertEquals(expectedResult, wordSearch.containsWordDiagonallyForward());
+    }
 
 }
