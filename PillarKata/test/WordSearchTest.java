@@ -196,4 +196,23 @@ class WordSearchTest {
 
         assertEquals(expectedWords, wordSearch.containsWordDiagonallyDescForward());
     }
+
+    @Test
+    public void whenSearchingEachDiagonalRowDescBackward_AreAnyWordsPresent() {
+        /// Test if any of the diagonal rows contains one of the words we want to find.
+        /// containsWordDiagonallyDescForward returns a list of strings
+        // containing the names found with their coordinates.
+        /// For this test, I had to change the input text file to include a backwards
+        // diagonal descending word.
+        /*
+        As the Puzzle Solver, I want to search diagonally descending so that I can find words that
+        descend along the x-axis.
+        */
+
+        /// Create the expected result.
+        final ArrayList<String> expectedWords = new ArrayList<>();
+        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
+
+        assertEquals(expectedWords, wordSearch.containsWordDiagonallyDescBackward());
+    }
 }
