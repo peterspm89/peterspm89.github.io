@@ -139,4 +139,6 @@ class WordSearchTest {
         assertEquals(expectedWords, wordSearch.containsWordVerticallyBackward());
     }
 
+    /// TODO: Refactor horizontal and vertical searches to remove duplicate code.
+
 }
