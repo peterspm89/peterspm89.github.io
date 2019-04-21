@@ -151,8 +151,8 @@ class WordSearchTest {
         /// containsWordDiagonallyForward returns a list of strings
         // containing the names found with their coordinates.
         /*
-        As the Puzzle Solver, I want to search diagonally descending so that I can find words that
-        descend along the x-axis.
+        As the Puzzle Solver, I want to search diagonally ascending so that I can find words that
+        ascend along the x-axis.
         */
 
         /// Create the expected result.
@@ -168,8 +168,8 @@ class WordSearchTest {
         /// containsWordDiagonallyForward returns a list of strings
         // containing the names found with their coordinates.
         /*
-        As the Puzzle Solver, I want to search diagonally descending so that I can find words that
-        descend along the x-axis.
+        As the Puzzle Solver, I want to search diagonally ascending so that I can find words that
+        ascend along the x-axis.
         */
 
         /// Create the expected result.
@@ -179,4 +179,21 @@ class WordSearchTest {
         assertEquals(expectedWords, wordSearch.containsWordDiagonallyAscBackward());
     }
 
+
+    @Test
+    public void whenSearchingEachDiagonalRowDescForward_AreAnyWordsPresent() {
+        /// Test if any of the diagonal rows contains one of the words we want to find.
+        /// containsWordDiagonallyDescForward returns a list of strings
+        // containing the names found with their coordinates.
+        /*
+        As the Puzzle Solver, I want to search diagonally descending so that I can find words that
+        descend along the x-axis.
+        */
+
+        /// Create the expected result.
+        final ArrayList<String> expectedWords = new ArrayList<>();
+        expectedWords.add("UHURA: (4,0),(3,1),(2,2),(1,3),(0,4)");
+
+        assertEquals(expectedWords, wordSearch.containsWordDiagonallyDescForward());
+    }
 }

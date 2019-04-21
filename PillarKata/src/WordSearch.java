@@ -393,4 +393,82 @@ public class WordSearch {
 
         return wordsFound;
     }
+
+    /// Returns the words found and their coordinates searching diagonally asc forward.
+    public ArrayList<String> containsWordDiagonallyDescForward() {
+
+        /// Not sure how many words I will find, so I am using a container
+        /// that dynamically grows.
+        ArrayList<String> wordsFound = new ArrayList();
+
+        int index;
+        String formattedOutput;
+        String line;
+        /// Words have to be two characters in length.
+        for (int x = this.getHeight()-1; x >= 0; x--) {
+
+            line = getDiagonalDescRowAtIndex(x, this.getWidth()-1);
+
+            for (String word : words) {
+                if (line.contains(word)) {
+
+                    formattedOutput = String.format("%s: ", word);
+                    index = line.indexOf(word);
+                    for (int y = 0; y < word.length(); y++) {
+
+                        formattedOutput += String.format("(%d,%d),", (this.getWidth()-y-1), x+y);
+                    }
+
+                    /// Remove the last character in string, which is an extra comma.
+                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                    wordsFound.add(formattedOutput);
+                }
+            }
+
+        }
+
+        /// Words have to be two characters in length.
+        for (int x = this.getWidth()-1; x >= 0; x--) {
+
+            line = getDiagonalDescRowAtIndex(0, x);
+
+            for (String word : words) {
+                if (line.contains(word)) {
+
+                    formattedOutput = String.format("%s: ", word);
+                    index = line.indexOf(word);
+                    System.out.println(index);
+                    for (int y = 0; y < word.length(); y++) {
+
+                        formattedOutput += String.format("(%d,%d),", x-y, y);
+                    }
+
+                    /// Remove the last character in string, which is an extra comma.
+                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                    wordsFound.add(formattedOutput);
+                }
+            }
+
+        }
+
+
+        return wordsFound;
+    }
+
+    /// Auxiliary method supporting containsWordDiagonallyForward
+    private String getDiagonalDescRowAtIndex(Integer row, Integer column) {
+        String temp = new String();
+        int i = row;
+        int j = column;
+
+        while (i < this.getWidth() && j >= 0) {
+
+            temp += grid[i][j];
+
+            i++;
+            j--;
+        }
+
+        return temp;
+    }
 }
