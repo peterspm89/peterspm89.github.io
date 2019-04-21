@@ -156,7 +156,7 @@ class WordSearchTest {
 
        final boolean expectedResult = true;
 
-        assertEquals(expectedResult, wordSearch.containsWordDiagonallyForward());
+        assertEquals(expectedResult, wordSearch.containsWordDiagonallyAscForward());
     }
 
 }

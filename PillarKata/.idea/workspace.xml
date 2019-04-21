@@ -16,14 +16,14 @@
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47281832">
+    <splitter split-orientation="horizontal" split-proportion="0.4899857">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/WordSearch.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="365">
-                  <caret line="251" column="8" selection-start-line="251" selection-start-column="8" selection-end-line="251" selection-end-column="8" />
+                <state relative-caret-position="236">
+                  <caret line="274" lean-forward="true" selection-start-line="274" selection-end-line="274" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#2075#2076#0" expanded="true" />
@@ -42,7 +42,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="380">
+                <state relative-caret-position="296">
                   <caret line="158" column="73" selection-start-line="158" selection-start-column="73" selection-end-line="158" selection-end-column="73" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -177,34 +177,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WordSearchTest - 2019.04.20 at 17h 35m 57s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 16h 49m 29s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.20 at 17h 36m 09s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 16h 49m 56s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.20 at 17h 36m 38s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 16h 50m 15s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.20 at 17h 37m 27s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 16h 51m 44s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.20 at 17h 37m 45s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 16h 52m 22s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 16h 16m 57s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 16h 52m 36s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 16h 17m 20s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 16h 53m 41s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 16h 17m 40s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 16h 55m 21s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 16h 18m 04s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 16h 56m 50s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 16h 19m 18s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 17h 02m 21s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -220,13 +220,13 @@
       <window_info content_ui="combo" id="Project" order="0" weight="0.24320458" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.21418826" />
+      <window_info anchor="bottom" id="Terminal" weight="0.21418826" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
       <window_info anchor="bottom" id="Messages" weight="0.3287858" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3287858" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3287858" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39972714" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -253,7 +253,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
+        <state relative-caret-position="296">
           <caret line="158" column="73" selection-start-line="158" selection-start-column="73" selection-end-line="158" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -269,8 +269,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WordSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="251" column="8" selection-start-line="251" selection-start-column="8" selection-end-line="251" selection-end-column="8" />
+        <state relative-caret-position="236">
+          <caret line="274" lean-forward="true" selection-start-line="274" selection-end-line="274" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2075#2076#0" expanded="true" />

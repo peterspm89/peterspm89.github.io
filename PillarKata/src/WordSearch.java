@@ -246,11 +246,57 @@ public class WordSearch {
     }
 
     /// Returns the words found and their coordinates searching horizontally forward.
-    public boolean containsWordDiagonallyForward() {
+    public boolean containsWordDiagonallyAscForward() {
+
+        String line;
+        /// Words have to be two characters in length.
+        for (int i = this.getHeight()-1; i >= 0; i--) {
+
+            line = getDiagonalRowAtIndex(i, 0);
 
 
+            for (String word : words) {
+                if (line.contains(word)) {
+
+                    return true;
+                }
+            }
+
+        }
+
+        /// Words have to be two characters in length.
+        for (int i = 1; i < this.getWidth(); i++) {
+
+            line = getDiagonalRowAtIndex(0, i);
 
 
-        return true;
+            for (String word : words) {
+                if (line.contains(word)) {
+
+                    return true;
+                }
+            }
+
+        }
+
+
+        return false;
+    }
+
+    /// Auxiliary method supporting containsWordDiagonallyForward
+    private String getDiagonalRowAtIndex(Integer row, Integer column) {
+        String temp = new String();
+        int i = row;
+        int j = column;
+
+        while (i < this.getHeight() && j < this.getWidth()) {
+
+            temp += grid[i][j];
+
+            i++;
+            j++;
+        }
+
+        return temp;
     }
 }
