@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecf57921-c8c4-4f5f-841f-ca02b1fed9ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/sample_input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample_input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/WordSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/WordSearchTest.java" afterDir="false" />
     </list>
@@ -23,8 +24,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/WordSearch.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="381">
-                  <caret line="294" column="84" selection-start-line="294" selection-start-column="84" selection-end-line="294" selection-end-column="84" />
+                <state relative-caret-position="293">
+                  <caret line="382" column="73" selection-start-line="382" selection-start-column="73" selection-end-line="382" selection-end-column="73" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#2075#2076#0" expanded="true" />
@@ -43,8 +44,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="296">
-                  <caret line="161" column="14" lean-forward="true" selection-start-line="161" selection-start-column="14" selection-end-line="161" selection-end-column="14" />
+                <state relative-caret-position="251">
+                  <caret line="175" column="61" lean-forward="true" selection-start-line="175" selection-start-column="61" selection-end-line="175" selection-end-column="61" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#setUp#0;class#WordSearchTest#0" />
@@ -178,34 +179,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WordSearchTest - 2019.04.21 at 16h 55m 21s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 17h 45m 24s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 16h 56m 50s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 17h 46m 28s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 17h 02m 21s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 17h 47m 02s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 17h 08m 30s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 17h 47m 43s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 17h 09m 05s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 17h 47m 59s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 17h 11m 47s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 17h 48m 34s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 17h 15m 46s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 17h 49m 23s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 17h 21m 34s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 17h 50m 14s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 17h 22m 47s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 17h 50m 36s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WordSearchTest - 2019.04.21 at 17h 23m 55s.xml">
+    <history-entry file="WordSearchTest - 2019.04.21 at 17h 51m 24s.xml">
       <configuration name="WordSearchTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -254,8 +255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/WordSearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="161" column="14" lean-forward="true" selection-start-line="161" selection-start-column="14" selection-end-line="161" selection-end-column="14" />
+        <state relative-caret-position="251">
+          <caret line="175" column="61" lean-forward="true" selection-start-line="175" selection-start-column="61" selection-end-line="175" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setUp#0;class#WordSearchTest#0" />
@@ -270,8 +271,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WordSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="294" column="84" selection-start-line="294" selection-start-column="84" selection-end-line="294" selection-end-column="84" />
+        <state relative-caret-position="293">
+          <caret line="382" column="73" selection-start-line="382" selection-start-column="73" selection-end-line="382" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2075#2076#0" expanded="true" />
