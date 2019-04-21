@@ -244,4 +244,13 @@ public class WordSearch {
 
         return wordsFound;
     }
+
+    /// Returns the words found and their coordinates searching horizontally forward.
+    public boolean containsWordDiagonallyForward() {
+
+
+
+
+        return true;
+    }
 }
