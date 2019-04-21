@@ -205,4 +205,43 @@ public class WordSearch {
 
         return wordsFound;
     }
+
+    /// Returns the words found and their coordinates searching horizontally forward.
+    public ArrayList<String> containsWordVerticallyBackward() {
+
+        /// Not sure how many words I will find, so I am using a container
+        /// that dynamically grows.
+        ArrayList<String> wordsFound = new ArrayList();
+
+        int index;
+        String formattedOutput;
+        String column;
+        for (int x = 0; x < this.getHeight(); x++) {
+
+            column = getColumnAtIndex(x);
+            java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
+            _reverse.append(column);
+            _reverse = _reverse.reverse();
+            column = _reverse.toString();
+
+            for (String word : words) {
+                if (column.contains(word)) {
+
+                    formattedOutput = String.format("%s: ", word);
+                    index = column.indexOf(word);
+                    for (int y = 0; y < word.length(); y++) {
+
+                        formattedOutput += String.format("(%d,%d),", x, (this.getWidth()-index-y-1));
+                    }
+
+                    /// Remove the last character in string, which is an extra comma.
+                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                    wordsFound.add(formattedOutput);
+                }
+            }
+
+        }
+
+        return wordsFound;
+    }
 }
