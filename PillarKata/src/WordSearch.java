@@ -245,42 +245,66 @@ public class WordSearch {
         return wordsFound;
     }
 
-    /// Returns the words found and their coordinates searching horizontally forward.
-    public boolean containsWordDiagonallyAscForward() {
+    /// Returns the words found and their coordinates searching diagonally asc forward.
+    public ArrayList<String> containsWordDiagonallyAscForward() {
 
+        /// Not sure how many words I will find, so I am using a container
+        /// that dynamically grows.
+        ArrayList<String> wordsFound = new ArrayList();
+
+        int index;
+        String formattedOutput;
         String line;
         /// Words have to be two characters in length.
-        for (int i = this.getHeight()-1; i >= 0; i--) {
+        for (int x = this.getHeight()-1; x >= 0; x--) {
 
-            line = getDiagonalRowAtIndex(i, 0);
+            line = getDiagonalRowAtIndex(x, 0);
 
 
             for (String word : words) {
                 if (line.contains(word)) {
 
-                    return true;
+                    formattedOutput = String.format("%s: ", word);
+                    index = line.indexOf(word);
+                    for (int y = 0; y < word.length(); y++) {
+
+                        formattedOutput += String.format("(%d,%d),", index+x, index+y);
+                    }
+
+                    /// Remove the last character in string, which is an extra comma.
+                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                    wordsFound.add(formattedOutput);
                 }
             }
 
         }
 
         /// Words have to be two characters in length.
-        for (int i = 1; i < this.getWidth(); i++) {
+        for (int x = 1; x < this.getWidth(); x++) {
 
-            line = getDiagonalRowAtIndex(0, i);
+            line = getDiagonalRowAtIndex(0, x);
 
 
             for (String word : words) {
                 if (line.contains(word)) {
 
-                    return true;
+                    formattedOutput = String.format("%s: ", word);
+                    index = line.indexOf(word);
+                    for (int y = 0; y < word.length(); y++) {
+
+                        formattedOutput += String.format("(%d,%d),", index+x+y, index+y);
+                    }
+
+                    /// Remove the last character in string, which is an extra comma.
+                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                    wordsFound.add(formattedOutput);
                 }
             }
 
         }
 
 
-        return false;
+        return wordsFound;
     }
 
     /// Auxiliary method supporting containsWordDiagonallyForward
