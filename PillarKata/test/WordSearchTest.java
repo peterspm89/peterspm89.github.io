@@ -91,7 +91,7 @@ class WordSearchTest {
 
     @Test
     public void whenSearchingEachRowVerticalForward_AreAnyWordsPresent() {
-        /// Test if any of the rows contains one of the words we want to find.
+        /// Test if any of the columns contains one of the words we want to find.
         /// containsWordVerticallyForward returns the words found and their coordinates.
         /*
         As the Puzzle Solver, I want to search vertically so that I can find words on the
@@ -120,6 +120,23 @@ class WordSearchTest {
         expectedWords.add("KIRK: (4,7),(3,7),(2,7),(1,7)");
 
         assertEquals(expectedWords, wordSearch.containsWordHorizontallyBackward());
+    }
+
+    @Test
+    public void whenSearchingEachRowVerticallyBackward_AreAnyWordsPresent() {
+        /// Test if any of the columns contains one of the words we want to find.
+        /// containsWordHVerticallyBackward returns a list of strings
+        // containing the names found with their coordinates.
+        /*
+        As the Puzzle Solver, I want to search backwards so that I can find words in the
+        reverse along all axes.
+         */
+
+        /// Create the expected result.
+        final ArrayList<String> expectedWords = new ArrayList<>();
+        expectedWords.add("KHAN: (5,9),(5,8),(5,7),(5,6)");
+
+        assertEquals(expectedWords, wordSearch.containsWordVerticallyBackward());
     }
 
 }
