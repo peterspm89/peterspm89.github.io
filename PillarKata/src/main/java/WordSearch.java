@@ -638,10 +638,10 @@ public class WordSearch {
 
     public void findAll() {
         try {
-            containsWordHorizontallyForward();
-            containsWordHorizontallyBackward();
             containsWordVerticallyForward();
             containsWordVerticallyBackward();
+            containsWordHorizontallyBackward();
+            containsWordHorizontallyForward();
             containsWordDiagonallyAscForward();
             containsWordDiagonallyAscBackward();
             containsWordDiagonallyDescForward();

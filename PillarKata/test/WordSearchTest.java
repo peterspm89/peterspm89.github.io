@@ -237,16 +237,19 @@ class WordSearchTest {
         // diagonal descending word.
 
         /// Create the expected result.
-        final ArrayList<String> expectedWords = new ArrayList<>();
-        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
-        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
-        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
-        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
-        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
-        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
-        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
-        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
+        final String[] expectedWords = new String[8];
+        expectedWords[0] = "BONES: (0,6),(0,7),(0,8),(0,9),(0,10)";
+        expectedWords[1] = "KHAN: (5,9),(5,8),(5,7),(5,6)";
+        expectedWords[2] = "KIRK: (4,7),(3,7),(2,7),(1,7)";
+        expectedWords[3] = "SCOTTY: (0,5),(1,5),(2,5),(3,5),(4,5),(5,5)";
+        expectedWords[4] = "SPOCK: (2,1),(3,2),(4,3),(5,4),(6,5)";
+        expectedWords[5] = "SULU: (3,3),(2,2),(1,1),(0,0)";
+        expectedWords[6] = "UHURA: (4,0),(3,1),(2,2),(1,3),(0,4)";
+        /// NOTE: this last output I added myself to the input file.
+        expectedWords[7] = "KIRK: (11,14),(12,13),(13,12),(14,11)";
 
-        assertEquals(expectedWords, wordSearch.getOutput());
+        wordSearch.findAll();
+
+        assertArrayEquals(expectedWords, wordSearch.getOutput());
     }
 }
