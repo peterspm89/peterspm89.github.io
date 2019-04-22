@@ -251,5 +251,6 @@ class WordSearchTest {
         wordSearch.findAll();
 
         assertArrayEquals(expectedWords, wordSearch.getOutput());
+        assertEquals(8, wordSearch.getOutput().length);
     }
 }
