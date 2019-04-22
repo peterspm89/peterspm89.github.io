@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ class WordSearchTest {
         wordSearch = new WordSearch();
     }
 
+    @DisplayName("Verify Words to find are set.")
     @Test
     public void whenWordSearchIsCreated_VerifyTheWordsToFindAreIdentified() {
         /// My first test will simply instantiate an instance of WordSearch and

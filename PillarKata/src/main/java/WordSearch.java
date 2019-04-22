@@ -22,7 +22,7 @@ public class WordSearch {
         // file until we are ready to set our member properties.
         /// Not sure what the dimensions are for the grid, so I am using a container
         /// that dynamically grows.
-        List<String> lines = new ArrayList();
+        List<String> lines = new ArrayList<String>();
 
 
         /// Open input file and get contents.
@@ -94,7 +94,7 @@ public class WordSearch {
 
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
-        ArrayList<String> wordsFound = new ArrayList();
+        ArrayList<String> wordsFound = new ArrayList<String>();
 
         String line;
         int index;
@@ -128,7 +128,7 @@ public class WordSearch {
 
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
-        ArrayList<String> wordsFound = new ArrayList();
+        ArrayList<String> wordsFound = new ArrayList<String>();
 
         int index;
         String formattedOutput;
@@ -172,7 +172,7 @@ public class WordSearch {
 
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
-        ArrayList<String> wordsFound = new ArrayList();
+        ArrayList<String> wordsFound = new ArrayList<String>();
 
         String line;
         int index;
@@ -211,7 +211,7 @@ public class WordSearch {
 
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
-        ArrayList<String> wordsFound = new ArrayList();
+        ArrayList<String> wordsFound = new ArrayList<String>();
 
         int index;
         String formattedOutput;
@@ -250,7 +250,7 @@ public class WordSearch {
 
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
-        ArrayList<String> wordsFound = new ArrayList();
+        ArrayList<String> wordsFound = new ArrayList<String>();
 
         int index;
         String formattedOutput;
@@ -330,7 +330,7 @@ public class WordSearch {
 
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
-        ArrayList<String> wordsFound = new ArrayList();
+        ArrayList<String> wordsFound = new ArrayList<String>();
 
         int index;
         String formattedOutput;
@@ -399,7 +399,7 @@ public class WordSearch {
 
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
-        ArrayList<String> wordsFound = new ArrayList();
+        ArrayList<String> wordsFound = new ArrayList<String>();
 
         int index;
         String formattedOutput;
@@ -476,7 +476,7 @@ public class WordSearch {
 
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
-        ArrayList<String> wordsFound = new ArrayList();
+        ArrayList<String> wordsFound = new ArrayList<String>();
 
         int index;
         String formattedOutput;
