@@ -11,7 +11,7 @@ public class WordSearch {
     private String[] words;
 
     /// The output that will consist of the coordinates of each letter found.
-    private String[] output;
+    private ArrayList<String> output;
 
     /// The grid of single character values.
     private char[][] grid;
@@ -22,7 +22,7 @@ public class WordSearch {
         // file until we are ready to set our member properties.
         /// Not sure what the dimensions are for the grid, so I am using a container
         /// that dynamically grows.
-        List<String> lines = new ArrayList<String>();
+        List<String> lines = new ArrayList<>();
 
 
         /// Open input file and get contents.
@@ -49,7 +49,7 @@ public class WordSearch {
         try {
 
             words = lines.get(0).split(",");
-            output = new String[0];
+            output = new ArrayList<>();
 
             grid = new char[lines.size()-1][lines.size()-1];
 
@@ -76,7 +76,14 @@ public class WordSearch {
 
     /// Public getter
     public String[] getOutput() {
-        return output;
+        String s[] = new String[output.size()];
+        int i = 0;
+        for (String line: output
+             ) {
+            s[i] = line;
+            i++;
+        }
+        return s;
     }
 
     /// Public getter
@@ -92,32 +99,42 @@ public class WordSearch {
     /// Returns the words found and their coordinates searching horizontally forward.
     public ArrayList<String> containsWordHorizontallyForward() {
 
+
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
         ArrayList<String> wordsFound = new ArrayList<String>();
 
+
         String line;
         int index;
         String formattedOutput;
-        for (int x = 0; x < this.getHeight(); x++) {
+        try {
+            for (int x = 0; x < this.getHeight(); x++) {
 
-            line = new String(grid[x]);
-            for (String word : words) {
+                line = new String(grid[x]);
+                for (String word : words) {
 
-                if (line.contains(word)) {
+                    if (line.contains(word)) {
 
-                    formattedOutput = String.format("%s: ", word);
-                    index = line.indexOf(word);
-                    for (int y = 0; y < word.length(); y++) {
+                        formattedOutput = String.format("%s: ", word);
+                        index = line.indexOf(word);
+                        for (int y = 0; y < word.length(); y++) {
 
-                        formattedOutput += String.format("(%d,%d),", (index+y), x);
+                            formattedOutput += String.format("(%d,%d),", (index + y), x);
+                        }
+
+                        /// Remove the last character in string, which is an extra comma.
+                        formattedOutput = formattedOutput.substring(0, formattedOutput.length() - 1);
+                        wordsFound.add(formattedOutput);
                     }
-
-                    /// Remove the last character in string, which is an extra comma.
-                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
-                    wordsFound.add(formattedOutput);
                 }
             }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        for (String s: wordsFound
+             ) {
+            output.add(s);
         }
 
         return wordsFound;
@@ -128,30 +145,39 @@ public class WordSearch {
 
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
-        ArrayList<String> wordsFound = new ArrayList<String>();
+        ArrayList<String> wordsFound = new ArrayList<>();
 
         int index;
         String formattedOutput;
         String column;
-        for (int x = 0; x < this.getHeight(); x++) {
+        try {
+            for (int x = 0; x < this.getHeight(); x++) {
 
-            column = getColumnAtIndex(x);
-            for (String word : words) {
-                if (column.contains(word)) {
+                column = getColumnAtIndex(x);
+                for (String word : words) {
+                    if (column.contains(word)) {
 
-                    formattedOutput = String.format("%s: ", word);
-                    index = column.indexOf(word);
-                    for (int y = 0; y < word.length(); y++) {
+                        formattedOutput = String.format("%s: ", word);
+                        index = column.indexOf(word);
+                        for (int y = 0; y < word.length(); y++) {
 
-                        formattedOutput += String.format("(%d,%d),", x, (index+y));
+                            formattedOutput += String.format("(%d,%d),", x, (index+y));
+                        }
+
+                        /// Remove the last character in string, which is an extra comma.
+                        formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                        wordsFound.add(formattedOutput);
                     }
-
-                    /// Remove the last character in string, which is an extra comma.
-                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
-                    wordsFound.add(formattedOutput);
                 }
-            }
 
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        for (String s: wordsFound
+        ) {
+            output.add(s);
         }
 
         return wordsFound;
@@ -172,35 +198,45 @@ public class WordSearch {
 
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
-        ArrayList<String> wordsFound = new ArrayList<String>();
+        ArrayList<String> wordsFound = new ArrayList<>();
+
 
         String line;
         int index;
         String formattedOutput;
-        for (int x = 0; x < this.getHeight(); x++) {
+        try {
+            for (int x = 0; x < this.getHeight(); x++) {
 
-            line = new String(grid[x]);
-            java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
-            _reverse.append(line);
-            _reverse = _reverse.reverse();
-            line = _reverse.toString();
+                line = new String(grid[x]);
+                java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
+                _reverse.append(line);
+                _reverse = _reverse.reverse();
+                line = _reverse.toString();
 
-            for (String word : words) {
+                for (String word : words) {
 
-                if (line.contains(word)) {
+                    if (line.contains(word)) {
 
-                    formattedOutput = String.format("%s: ", word);
-                    index = line.indexOf(word);
-                    for (int y = 0; y < word.length(); y++) {
+                        formattedOutput = String.format("%s: ", word);
+                        index = line.indexOf(word);
+                        for (int y = 0; y < word.length(); y++) {
 
-                        formattedOutput += String.format("(%d,%d),", (this.getWidth()-index-y-1), x);
+                            formattedOutput += String.format("(%d,%d),", (this.getWidth()-index-y-1), x);
+                        }
+
+                        /// Remove the last character in string, which is an extra comma.
+                        formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                        wordsFound.add(formattedOutput);
                     }
-
-                    /// Remove the last character in string, which is an extra comma.
-                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
-                    wordsFound.add(formattedOutput);
                 }
             }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        for (String s: wordsFound
+        ) {
+            output.add(s);
         }
 
         return wordsFound;
@@ -211,35 +247,45 @@ public class WordSearch {
 
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
-        ArrayList<String> wordsFound = new ArrayList<String>();
+        ArrayList<String> wordsFound = new ArrayList<>();
+
 
         int index;
         String formattedOutput;
         String column;
-        for (int x = 0; x < this.getHeight(); x++) {
+        try {
+            for (int x = 0; x < this.getHeight(); x++) {
 
-            column = getColumnAtIndex(x);
-            java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
-            _reverse.append(column);
-            _reverse = _reverse.reverse();
-            column = _reverse.toString();
+                column = getColumnAtIndex(x);
+                java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
+                _reverse.append(column);
+                _reverse = _reverse.reverse();
+                column = _reverse.toString();
 
-            for (String word : words) {
-                if (column.contains(word)) {
+                for (String word : words) {
+                    if (column.contains(word)) {
 
-                    formattedOutput = String.format("%s: ", word);
-                    index = column.indexOf(word);
-                    for (int y = 0; y < word.length(); y++) {
+                        formattedOutput = String.format("%s: ", word);
+                        index = column.indexOf(word);
+                        for (int y = 0; y < word.length(); y++) {
 
-                        formattedOutput += String.format("(%d,%d),", x, (this.getWidth()-index-y-1));
+                            formattedOutput += String.format("(%d,%d),", x, (this.getWidth()-index-y-1));
+                        }
+
+                        /// Remove the last character in string, which is an extra comma.
+                        formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                        wordsFound.add(formattedOutput);
                     }
-
-                    /// Remove the last character in string, which is an extra comma.
-                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
-                    wordsFound.add(formattedOutput);
                 }
-            }
 
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        for (String s: wordsFound
+        ) {
+            output.add(s);
         }
 
         return wordsFound;
@@ -250,57 +296,71 @@ public class WordSearch {
 
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
-        ArrayList<String> wordsFound = new ArrayList<String>();
+        ArrayList<String> wordsFound = new ArrayList<>();
+
 
         int index;
         String formattedOutput;
         String line;
-        /// Words have to be two characters in length.
-        for (int x = this.getHeight()-1; x >= 0; x--) {
+        try {
+            /// Words have to be two characters in length.
+            for (int x = this.getHeight()-1; x >= 0; x--) {
 
-            line = getDiagonalAscRowAtIndex(x, 0);
+                line = getDiagonalAscRowAtIndex(x, 0);
 
 
-            for (String word : words) {
-                if (line.contains(word)) {
+                for (String word : words) {
+                    if (line.contains(word)) {
 
-                    formattedOutput = String.format("%s: ", word);
-                    index = line.indexOf(word);
-                    for (int y = 0; y < word.length(); y++) {
+                        formattedOutput = String.format("%s: ", word);
+                        index = line.indexOf(word);
+                        for (int y = 0; y < word.length(); y++) {
 
-                        formattedOutput += String.format("(%d,%d),", index+x, index+y);
+                            formattedOutput += String.format("(%d,%d),", index+x, index+y);
+                        }
+
+                        /// Remove the last character in string, which is an extra comma.
+                        formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                        wordsFound.add(formattedOutput);
                     }
-
-                    /// Remove the last character in string, which is an extra comma.
-                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
-                    wordsFound.add(formattedOutput);
                 }
-            }
 
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
 
-        /// Words have to be two characters in length.
-        for (int x = 1; x < this.getWidth(); x++) {
+        try {
+            /// Words have to be two characters in length.
+            for (int x = 1; x < this.getWidth(); x++) {
 
-            line = getDiagonalAscRowAtIndex(0, x);
+                line = getDiagonalAscRowAtIndex(0, x);
 
 
-            for (String word : words) {
-                if (line.contains(word)) {
+                for (String word : words) {
+                    if (line.contains(word)) {
 
-                    formattedOutput = String.format("%s: ", word);
-                    index = line.indexOf(word);
-                    for (int y = 0; y < word.length(); y++) {
+                        formattedOutput = String.format("%s: ", word);
+                        index = line.indexOf(word);
+                        for (int y = 0; y < word.length(); y++) {
 
-                        formattedOutput += String.format("(%d,%d),", index+x+y, index+y);
+                            formattedOutput += String.format("(%d,%d),", index+x+y, index+y);
+                        }
+
+                        /// Remove the last character in string, which is an extra comma.
+                        formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                        wordsFound.add(formattedOutput);
                     }
-
-                    /// Remove the last character in string, which is an extra comma.
-                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
-                    wordsFound.add(formattedOutput);
                 }
-            }
 
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        for (String s: wordsFound
+        ) {
+            output.add(s);
         }
 
 
@@ -330,64 +390,77 @@ public class WordSearch {
 
         /// Not sure how many words I will find, so I am using a container
         /// that dynamically grows.
-        ArrayList<String> wordsFound = new ArrayList<String>();
+        ArrayList<String> wordsFound = new ArrayList<>();
 
         int index;
         String formattedOutput;
         String line;
-        /// Words have to be two characters in length.
-        for (int x = this.getHeight()-1; x >= 0; x--) {
+        try {
+            /// Words have to be two characters in length.
+            for (int x = this.getHeight()-1; x >= 0; x--) {
 
-            line = getDiagonalAscRowAtIndex(x, 0);
-            java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
-            _reverse.append(line);
-            _reverse = _reverse.reverse();
-            line = _reverse.toString();
+                line = getDiagonalAscRowAtIndex(x, 0);
+                java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
+                _reverse.append(line);
+                _reverse = _reverse.reverse();
+                line = _reverse.toString();
 
 
-            for (String word : words) {
-                if (line.contains(word)) {
+                for (String word : words) {
+                    if (line.contains(word)) {
 
-                    formattedOutput = String.format("%s: ", word);
-                    index = line.indexOf(word);
-                    for (int y = 0; y < word.length(); y++) {
+                        formattedOutput = String.format("%s: ", word);
+                        index = line.indexOf(word);
+                        for (int y = 0; y < word.length(); y++) {
 
-                        formattedOutput += String.format("(%d,%d),", (this.getWidth()-index-y-1), (this.getWidth()-index-y-1));
+                            formattedOutput += String.format("(%d,%d),", (this.getWidth()-index-y-1), (this.getWidth()-index-y-1));
+                        }
+
+                        /// Remove the last character in string, which is an extra comma.
+                        formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                        wordsFound.add(formattedOutput);
                     }
-
-                    /// Remove the last character in string, which is an extra comma.
-                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
-                    wordsFound.add(formattedOutput);
                 }
-            }
 
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
 
-        /// Words have to be two characters in length.
-        for (int x = 1; x < this.getWidth(); x++) {
+        try {
+            /// Words have to be two characters in length.
+            for (int x = 1; x < this.getWidth(); x++) {
 
-            line = getDiagonalAscRowAtIndex(0, x);
-            java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
-            _reverse.append(line);
-            _reverse = _reverse.reverse();
-            line = _reverse.toString();
+                line = getDiagonalAscRowAtIndex(0, x);
+                java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
+                _reverse.append(line);
+                _reverse = _reverse.reverse();
+                line = _reverse.toString();
 
-            for (String word : words) {
-                if (line.contains(word)) {
+                for (String word : words) {
+                    if (line.contains(word)) {
 
-                    formattedOutput = String.format("%s: ", word);
-                    index = line.indexOf(word);
-                    for (int y = 0; y < word.length(); y++) {
+                        formattedOutput = String.format("%s: ", word);
+                        for (int y = 0; y < word.length(); y++) {
 
-                        formattedOutput += String.format("(%d,%d),", (this.getWidth()-y-1), word.length()-y-1);
+                            formattedOutput += String.format("(%d,%d),", (this.getWidth() - y - 1), word.length() - y - 1);
+                        }
+
+                        /// Remove the last character in string, which is an extra comma.
+                        formattedOutput = formattedOutput.substring(0, formattedOutput.length() - 1);
+                        wordsFound.add(formattedOutput);
                     }
-
-                    /// Remove the last character in string, which is an extra comma.
-                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
-                    wordsFound.add(formattedOutput);
                 }
-            }
 
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+
+        for (String s: wordsFound
+        ) {
+            output.add(s);
         }
 
 
@@ -401,53 +474,63 @@ public class WordSearch {
         /// that dynamically grows.
         ArrayList<String> wordsFound = new ArrayList<String>();
 
-        int index;
         String formattedOutput;
         String line;
-        /// Words have to be two characters in length.
-        for (int x = this.getHeight()-1; x >= 0; x--) {
+        try {
+            /// Words have to be two characters in length.
+            for (int x = this.getHeight()-1; x >= 0; x--) {
 
-            line = getDiagonalDescRowAtIndex(x, this.getWidth()-1);
+                line = getDiagonalDescRowAtIndex(x, this.getWidth()-1);
 
-            for (String word : words) {
-                if (line.contains(word)) {
+                for (String word : words) {
+                    if (line.contains(word)) {
 
-                    formattedOutput = String.format("%s: ", word);
-                    index = line.indexOf(word);
-                    for (int y = 0; y < word.length(); y++) {
+                        formattedOutput = String.format("%s: ", word);
+                        for (int y = 0; y < word.length(); y++) {
 
-                        formattedOutput += String.format("(%d,%d),", (this.getWidth()-y-1), x+y);
+                            formattedOutput += String.format("(%d,%d),", (this.getWidth()-y-1), x+y);
+                        }
+
+                        /// Remove the last character in string, which is an extra comma.
+                        formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                        wordsFound.add(formattedOutput);
                     }
-
-                    /// Remove the last character in string, which is an extra comma.
-                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
-                    wordsFound.add(formattedOutput);
                 }
-            }
 
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
 
-        /// Words have to be two characters in length.
-        for (int x = this.getWidth()-1; x >= 0; x--) {
+        try {
+            /// Words have to be two characters in length.
+            for (int x = this.getWidth()-1; x >= 0; x--) {
 
-            line = getDiagonalDescRowAtIndex(0, x);
+                line = getDiagonalDescRowAtIndex(0, x);
 
-            for (String word : words) {
-                if (line.contains(word)) {
+                for (String word : words) {
+                    if (line.contains(word)) {
 
-                    formattedOutput = String.format("%s: ", word);
-                    index = line.indexOf(word);
-                    for (int y = 0; y < word.length(); y++) {
+                        formattedOutput = String.format("%s: ", word);
+                        for (int y = 0; y < word.length(); y++) {
 
-                        formattedOutput += String.format("(%d,%d),", x-y, y);
+                            formattedOutput += String.format("(%d,%d),", x-y, y);
+                        }
+
+                        /// Remove the last character in string, which is an extra comma.
+                        formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                        wordsFound.add(formattedOutput);
                     }
-
-                    /// Remove the last character in string, which is an extra comma.
-                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
-                    wordsFound.add(formattedOutput);
                 }
-            }
 
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        for (String s: wordsFound
+        ) {
+            output.add(s);
         }
 
 
@@ -481,62 +564,90 @@ public class WordSearch {
         int index;
         String formattedOutput;
         String line;
-        /// Words have to be two characters in length.
-        for (int x = this.getHeight()-1; x >= 0; x--) {
+        try {
+            /// Words have to be two characters in length.
+            for (int x = this.getHeight()-1; x >= 0; x--) {
 
-            line = getDiagonalDescRowAtIndex(x, this.getWidth()-1);
-            java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
-            _reverse.append(line);
-            _reverse = _reverse.reverse();
-            line = _reverse.toString();
+                line = getDiagonalDescRowAtIndex(x, this.getWidth()-1);
+                java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
+                _reverse.append(line);
+                _reverse = _reverse.reverse();
+                line = _reverse.toString();
 
-            for (String word : words) {
-                if (line.contains(word)) {
+                for (String word : words) {
+                    if (line.contains(word)) {
 
-                    formattedOutput = String.format("%s: ", word);
-                    index = line.indexOf(word);
-                    for (int y = 0; y < word.length(); y++) {
+                        formattedOutput = String.format("%s: ", word);
+                        index = line.indexOf(word);
+                        for (int y = 0; y < word.length(); y++) {
 
-                        formattedOutput += String.format("(%d,%d),", x+y, (this.getWidth()-y-1));
+                            formattedOutput += String.format("(%d,%d),", x+y, (this.getWidth()-y-1));
+                        }
+
+                        /// Remove the last character in string, which is an extra comma.
+                        formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                        wordsFound.add(formattedOutput);
                     }
-
-                    /// Remove the last character in string, which is an extra comma.
-                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
-                    wordsFound.add(formattedOutput);
                 }
-            }
 
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
 
-        /// Words have to be two characters in length.
-        for (int x = this.getWidth()-1; x >= 0; x--) {
+        try {
+            /// Words have to be two characters in length.
+            for (int x = this.getWidth()-1; x >= 0; x--) {
 
-            line = getDiagonalDescRowAtIndex(0, x);
-            java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
-            _reverse.append(line);
-            _reverse = _reverse.reverse();
-            line = _reverse.toString();
+                line = getDiagonalDescRowAtIndex(0, x);
+                java.lang.StringBuilder _reverse = new java.lang.StringBuilder();
+                _reverse.append(line);
+                _reverse = _reverse.reverse();
+                line = _reverse.toString();
 
-            for (String word : words) {
-                if (line.contains(word)) {
+                for (String word : words) {
+                    if (line.contains(word)) {
 
-                    formattedOutput = String.format("%s: ", word);
-                    index = line.indexOf(word);
-                    System.out.println(index);
-                    for (int y = 0; y < word.length(); y++) {
+                        formattedOutput = String.format("%s: ", word);
+                        index = line.indexOf(word);
+                        System.out.println(index);
+                        for (int y = 0; y < word.length(); y++) {
 
-                        formattedOutput += String.format("(%d,%d),", y, x-y);
+                            formattedOutput += String.format("(%d,%d),", y, x-y);
+                        }
+
+                        /// Remove the last character in string, which is an extra comma.
+                        formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
+                        wordsFound.add(formattedOutput);
                     }
-
-                    /// Remove the last character in string, which is an extra comma.
-                    formattedOutput = formattedOutput.substring(0, formattedOutput.length()-1);
-                    wordsFound.add(formattedOutput);
                 }
-            }
 
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        for (String s: wordsFound
+        ) {
+            output.add(s);
         }
 
 
         return wordsFound;
+    }
+
+    public void findAll() {
+        try {
+            containsWordHorizontallyForward();
+            containsWordHorizontallyBackward();
+            containsWordVerticallyForward();
+            containsWordVerticallyBackward();
+            containsWordDiagonallyAscForward();
+            containsWordDiagonallyAscBackward();
+            containsWordDiagonallyDescForward();
+            containsWordDiagonallyDescBackward();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 }

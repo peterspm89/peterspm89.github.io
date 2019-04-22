@@ -50,6 +50,7 @@ class WordSearchTest {
         assertArrayEquals(expectedWords, wordSearch.getWords());
     }
 
+    @DisplayName("Verify Initial empty output results.")
     @Test
     public void whenWordSearchIsCreated_VerifyTheInitialOutputIsEmpty() {
         /// This second test makes sure that after the WordSearch is created the output is
@@ -61,6 +62,7 @@ class WordSearchTest {
         assertArrayEquals(expectedOutput, wordSearch.getOutput());
     }
 
+    @DisplayName("Verify grid dimensions are identical.")
     @Test
     public void whenWordSearchIsCreated_VerifyTheDimensionsOfGridAreIdentified() {
         /// This third test validates the dimensions of the grid from the input file.
@@ -74,6 +76,7 @@ class WordSearchTest {
         assertEquals(expectedDimensions, wordSearch.getWidth());
     }
 
+    @DisplayName("Find words horizontally forwards.")
     @Test
     public void whenSearchingEachRowHorizontalForward_AreAnyWordsPresent() {
         /// Test if any of the rows contains one of the words we want to find.
@@ -91,6 +94,7 @@ class WordSearchTest {
         assertEquals(expectedWords, wordSearch.containsWordHorizontallyForward());
     }
 
+    @DisplayName("Find words vertically forwards.")
     @Test
     public void whenSearchingEachColumnVerticalForward_AreAnyWordsPresent() {
         /// Test if any of the columns contains one of the words we want to find.
@@ -107,6 +111,7 @@ class WordSearchTest {
         assertEquals(expectedWords, wordSearch.containsWordVerticallyForward());
     }
 
+    @DisplayName("Find words horizontally backwards.")
     @Test
     public void whenSearchingEachRowHorizontalBackward_AreAnyWordsPresent() {
         /// Test if any of the rows contains one of the words we want to find.
@@ -124,6 +129,7 @@ class WordSearchTest {
         assertEquals(expectedWords, wordSearch.containsWordHorizontallyBackward());
     }
 
+    @DisplayName("Find words vertically backwards.")
     @Test
     public void whenSearchingEachColumnVerticallyBackward_AreAnyWordsPresent() {
         /// Test if any of the columns contains one of the words we want to find.
@@ -146,7 +152,7 @@ class WordSearchTest {
     /// TODO: Refactor horizontal and vertical searches to remove duplicate code.
 
 
-
+    @DisplayName("Find words diagonally ascending forwards.")
     @Test
     public void whenSearchingEachDiagonalRowAscForward_AreAnyWordsPresent() {
         /// Test if any of the diagonal rows contains one of the words we want to find.
@@ -164,6 +170,7 @@ class WordSearchTest {
         assertEquals(expectedWords, wordSearch.containsWordDiagonallyAscForward());
     }
 
+    @DisplayName("Find words diagonally descending backwards.")
     @Test
     public void whenSearchingEachDiagonalRowAscBackward_AreAnyWordsPresent() {
         /// Test if any of the diagonal rows contains one of the words we want to find.
@@ -182,6 +189,7 @@ class WordSearchTest {
     }
 
 
+    @DisplayName("Find words diagonally descending forwards.")
     @Test
     public void whenSearchingEachDiagonalRowDescForward_AreAnyWordsPresent() {
         /// Test if any of the diagonal rows contains one of the words we want to find.
@@ -199,6 +207,7 @@ class WordSearchTest {
         assertEquals(expectedWords, wordSearch.containsWordDiagonallyDescForward());
     }
 
+    @DisplayName("Find words diagonally descending backwards.")
     @Test
     public void whenSearchingEachDiagonalRowDescBackward_AreAnyWordsPresent() {
         /// Test if any of the diagonal rows contains one of the words we want to find.
@@ -216,5 +225,28 @@ class WordSearchTest {
         expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
 
         assertEquals(expectedWords, wordSearch.containsWordDiagonallyDescBackward());
+    }
+
+    @DisplayName("Find all words.")
+    @Test
+    public void whenSearchingFinAll_AreAnyWordsPresent() {
+        /// Test if all of the previously defined functions can find all words.
+        /// findAll returns a list of strings
+        // containing the names found with their coordinates.
+        /// For this test, I had to change the input text file to include a backwards
+        // diagonal descending word.
+
+        /// Create the expected result.
+        final ArrayList<String> expectedWords = new ArrayList<>();
+        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
+        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
+        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
+        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
+        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
+        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
+        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
+        expectedWords.add("KIRK: (11,14),(12,13),(13,12),(14,11)");
+
+        assertEquals(expectedWords, wordSearch.getOutput());
     }
 }
